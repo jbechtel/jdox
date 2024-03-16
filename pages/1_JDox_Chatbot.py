@@ -17,6 +17,8 @@ with st.sidebar:
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     "[View the source code](https://github.com/jbechtel/jdox)"
 
+openai_api_key = st.secrets.openai_key
+
 if "messages" not in st.session_state.keys():  # Initialize the chat messages history
     st.session_state.messages = [
         {"role": "assistant", "content": "Ask me a question about JWST, and I'll find an answer in from JDox."}
